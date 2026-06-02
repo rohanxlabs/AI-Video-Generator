@@ -1,58 +1,176 @@
-# AI-Short-Video
+# 🎬 AI Video Generator
 
-A simple AI-driven short video generator that creates an image from text, makes a short zoom-style video, generates speech from text, and merges audio with video.
+> An end-to-end AI-powered video generation platform that transforms simple text prompts into complete videos through automated script writing, scene generation, voice synthesis, music generation, and video rendering.
 
-## Setup
+## 🚀 Overview
 
-1. Create a Python virtual environment and activate it.
-2. Install dependencies:
+AI Video Generator is a full-stack application designed to automate the video creation process. Users provide a text prompt, and the system generates a structured story, breaks it into scenes, creates visual assets, generates voiceovers, adds background music, and composes the final video.
+
+The project demonstrates the integration of Large Language Models (LLMs), Generative AI, multimedia processing, and scalable backend architecture into a single production-oriented workflow.
+
+## ✨ Features
+
+- Text-to-Video Generation
+- AI Story & Script Creation
+- Automatic Scene Breakdown
+- AI Image Generation
+- Text-to-Speech Voiceovers
+- Background Music Integration
+- Video Composition & Rendering
+- REST API Architecture
+- Scalable Modular Design
+- User-Friendly Interface
+
+## 🏗️ System Architecture
+
+User Prompt
+    ↓
+Story Generator (LLM)
+    ↓
+Scene Generator
+    ↓
+Image Generation
+    ↓
+Voice Generation (TTS)
+    ↓
+Music Generation
+    ↓
+Video Composer
+    ↓
+Final Video Output
+
+## 🛠️ Tech Stack
+
+### Frontend
+- React.js / Next.js
+- Tailwind CSS
+- Axios
+
+### Backend
+- FastAPI
+- Python
+
+### AI & ML
+- Gemini API
+- OpenAI API (Optional)
+- Hugging Face Models
+
+### Media Processing
+- MoviePy
+- FFmpeg
+- Pillow
+
+### Database
+- MongoDB / PostgreSQL
+
+### Deployment
+- Docker
+- Render
+- Railway
+- Hugging Face Spaces
+
+## 📂 Project Structure
+
+AI-Video-Generator/
+
+├── frontend/
+
+├── backend/
+
+├── assets/
+
+├── generated/
+
+├── tests/
+
+├── requirements.txt
+
+├── Dockerfile
+
+└── README.md
+
+## ⚙️ Installation
+
+### Clone Repository
+
+```bash
+git clone https://github.com/rohanxlabs/AI-Video-Generator.git
+cd AI-Video-Generator
+```
+
+### Create Virtual Environment
+
+```bash
+python -m venv venv
+```
+
+### Activate Environment
+
+Windows:
+
+```bash
+venv\Scripts\activate
+```
+
+Linux / Mac:
+
+```bash
+source venv/bin/activate
+```
+
+### Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-3. Create a `.env` file in the project root and add your Hugging Face token:
-
-```
-HF_TOKEN=your_token_here
-```
-
-Alternatively, set the environment variable directly:
+### Run Application
 
 ```bash
-set HF_TOKEN=your_token_here
+uvicorn main:app --reload
 ```
 
-## Usage
+## 🔑 Environment Variables
 
-Generate an image:
+Create a `.env` file:
 
-```bash
-python image_gen.py --prompt "A cinematic 3D scene of a futuristic city" --output frame1.png
+```env
+GEMINI_API_KEY=your_api_key
+OPENAI_API_KEY=your_api_key
+DATABASE_URL=your_database_url
 ```
 
-Create a zoom video:
+## 📊 Future Roadmap
 
-```bash
-python video_gen.py --image outputs/frame1.png --output outputs/short_video.mp4
-```
+- User Authentication
+- Video History Dashboard
+- Multiple Video Styles
+- Multi-Language Support
+- AI Avatar Integration
+- Real-Time Video Generation
+- Cloud Storage Support
+- YouTube/TikTok Auto Publishing
 
-Generate speech:
+## 🎯 Learning Objectives
 
-```bash
-python voice.py --text "Welcome to the AI video generator" --output voice.mp3
-```
+This project showcases:
 
-Merge audio and video:
+- Generative AI Integration
+- LLM Orchestration
+- Backend System Design
+- API Development
+- Multimedia Processing
+- Scalable Software Architecture
+- Full-Stack Development
 
-```bash
-python merge.py --video outputs/short_video.mp4 --audio outputs/voice.mp3 --output outputs/final_video.mp4
-```
+## 🤝 Contributing
 
-## Full Pipeline
+Contributions, suggestions, and feature requests are welcome.
 
-Run the full pipeline with one command:
+## 📜 License
 
-```bash
-python main.py --prompt "A magical landscape at sunrise" --text "This short AI video was generated automatically."
-```
+This project is licensed under the MIT License.
+
+---
+
+Built with ❤️ using AI, FastAPI, and modern web technologies.
