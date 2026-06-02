@@ -1,4 +1,4 @@
-# HF-AI-Short-Video
+# AI-Short-Video
 
 A simple AI-driven short video generator that creates an image from text, makes a short zoom-style video, generates speech from text, and merges audio with video.
 
