@@ -1,7 +1,12 @@
-huggingface_hub
-Pillow
-moviepy
-imageio[ffmpeg]
-gTTS
-numpy
-python-dotenv
+# Core dependencies
+requests>=2.31.0
+huggingface_hub>=0.20.0
+Pillow>=10.0.0
+moviepy>=1.0.3
+imageio[ffmpeg]>=2.31.0
+numpy>=1.24.0
+python-dotenv>=1.0.0
+scipy>=1.11.0
+
+# Text-to-Speech
+gTTS>=2.4.0

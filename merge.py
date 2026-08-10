@@ -1,5 +1,5 @@
 from pathlib import Path
-from moviepy.editor import AudioFileClip, VideoFileClip
+from moviepy import VideoFileClip, AudioFileClip
 
 
 def merge_audio_video(video_path, audio_path, output_path="outputs/final_video.mp4"):
@@ -33,7 +33,7 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description="Combine a generated video and audio file into one output.")
     parser.add_argument("--video", default="outputs/short_video.mp4", help="Path to the video file.")
-    parser.add_argument("--audio", default="outputs/voice.mp3", help="Path to the audio file.")
+    parser.add_argument("--audio", default="outputs/voice.wav", help="Path to the audio file.")
     parser.add_argument("--output", default="outputs/final_video.mp4", help="Output merged video filename.")
     args = parser.parse_args()
     merge_audio_video(args.video, args.audio, args.output)

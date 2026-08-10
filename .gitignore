@@ -157,6 +157,14 @@ ENV/
 env.bak/
 venv.bak/
 
+# Project outputs
+outputs/*.png
+outputs/*.jpg
+outputs/*.mp4
+outputs/*.mp3
+outputs/*.wav
+!outputs/.gitkeep
+
 # Spyder project settings
 .spyderproject
 .spyproject

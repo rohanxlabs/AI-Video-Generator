@@ -1,6 +1,6 @@
 from pathlib import Path
 from PIL import Image
-from moviepy.editor import ImageSequenceClip
+from moviepy import ImageSequenceClip
 import numpy as np
 
 
